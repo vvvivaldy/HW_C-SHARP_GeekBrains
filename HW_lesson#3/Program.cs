@@ -50,3 +50,18 @@
 
 
 //task 3
+Console.Write("Введите число, до которого вы хотите видеть кубы: ");
+int N = int.Parse(Console.ReadLine()!);
+int res;
+for (int i = 1; i <= N; i++)
+{
+    res = i * i * i;
+    if (i < N)
+    {
+        Console.Write(res + ", ");
+    }
+    else if (i == N)
+    {
+        Console.WriteLine(res);
+    }
+}
