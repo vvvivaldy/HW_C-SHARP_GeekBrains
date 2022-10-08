@@ -65,3 +65,26 @@
 //         Console.WriteLine(res);
 //     }
 // }
+
+
+
+
+// Console.WriteLine("Число для проверки на поллиндромность: " );
+// int n = int.Parse(Console.ReadLine()!);
+// if (n > 9999 & n < 100000)
+// {
+//     int a = n/10000;
+//     int a2 = n/1000%10;
+//     int b = n%100/10;
+//     int b2 = n%10;
+//     if ( a == b2 & a2 == b )
+//     {
+//         Console.WriteLine("Это палиндром");
+//     }
+//     else{
+//         Console.WriteLine("это не палиндром");
+//     }
+// }
+// else{
+//     Console.WriteLine("это не пятизначное число");
+// }
