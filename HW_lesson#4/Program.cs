@@ -51,25 +51,24 @@
 
 
 
-//Объясняю принцип функции с void
-Console.Write("Введите колличество элементов в массиве: ");
-int ArrSize = int.Parse(Console.ReadLine()!);
+// //Объясняю принцип функции с void
+// Console.Write("Введите колличество элементов в массиве: ");
+// int ArrSize = int.Parse(Console.ReadLine()!);
 
-Console.Write("Введите минимальное число диапазона заполнения массива: ");
-int Min = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите минимальное число диапазона заполнения массива: ");
+// int Min = int.Parse(Console.ReadLine()!);
 
-Console.Write("Введите максимальное число диапазона заполнения массива: ");
-int Max = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите максимальное число диапазона заполнения массива: ");
+// int Max = int.Parse(Console.ReadLine()!);
 
-Arr(ArrSize, Min, Max);
+// Arr(ArrSize, Min, Max);
 
-void Arr(int size, int a, int b)
-{
-    int[] result = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        result[i] = new Random().Next(a, b + 1);
-    }
-    Console.WriteLine($"Вот ваш массив: [{String.Join(", ", result)}]");
-}
-
+// void Arr(int size, int a, int b)
+// {
+//     int[] result = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         result[i] = new Random().Next(a, b + 1);
+//     }
+//     Console.WriteLine($"Вот ваш массив: [{String.Join(", ", result)}]");
+// }
