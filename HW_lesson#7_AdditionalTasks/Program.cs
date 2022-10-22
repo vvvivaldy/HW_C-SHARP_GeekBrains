@@ -1,8 +1,15 @@
-﻿// 1-st Addition Task
+﻿// // 1-st Addition Task
 
+// Console.WriteLine("Введите размерность 3D массива");
+// Console.Write("Введите размер а: ");
+// int a = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите размер b: ");
+// int b = int.Parse(Console.ReadLine()!);
+// Console.Write("Введите размер c: ");
+// int c = int.Parse(Console.ReadLine()!);
 
-// WriteArr3D (RemovingRepetitions (2, 2, 2,
-//                                 GetArr3D (2, 2, 2)));
+// WriteArr3D (RemovingRepetitions (a, b, c,
+//                                 GetArr3D (a, b, c)));
 
 
 // int[,,] GetArr3D(int a, int b, int c)
