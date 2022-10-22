@@ -86,19 +86,34 @@ for (int i =0; i<size; i++)
 int n = size; // переменная n создана исключительно для меня, т.к. на бумаге у меня обозначены позиции с помощью n
 int line = 0;
 int col = n-1;
+int HelpNum = 0;
+int UnHelpNum = 4;
 int current = arr[0,n-1] +1; // потому что  первая строка массива заполнена. Это актуальное число
 while (n>0)
 {
-    for (int i = line+1; i<n; i++){
+    for (int i = line+1; i<n-HelpNum; i++){
         arr[i,col] = current;
         current++;
         line = i;
     }
-    for (int j = col-1; j>=0; j--){
+    for (int j = col-1; j>=HelpNum; j--){
         arr[line,j] = current;
         current++;
         col=j;
     }
+    n--;
+    HelpNum ++;
+    for (int i = line-1; i>=n-UnHelpNum; i--){
+        arr[i,col] = current;
+        current++;
+        line = i;
+    }
+    for (int j = col + 1;j<n-HelpNum;j++){
+        arr[line,j] = current;
+        current++;
+        col=j;
+    }
+    UnHelpNum-=2;
     n--;
 }
 
