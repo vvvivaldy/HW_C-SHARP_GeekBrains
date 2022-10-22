@@ -69,70 +69,63 @@
 // 2-nd Addition Task
 
 
-// немного перевыполню задачу и для красоты спирально заполню любой массив квадратного размера с четными сторонами и числами начиная со 100
-// на листочке находил закономерности,так что имею право :D
+// // немного перевыполню задачу и для красоты спирально заполню любой массив квадратного размера и числами начиная со 100
+// // на листочке находил закономерности,так что имею право :D
+// //Читать код достаточно сложно, уже делаю эту задачу второй или даже четвертый час, так что в моментах просто методом перебора делал действия))
+// // НО ЭТО ЧЕРТ ВОЗЬМИ РАБОАТЕТ!!! С ЛЮБЫМ РАЗМЕРОМ МАССИВА
 // Console.Write("Введите размер стороны квадратного массива (четное число): ");
-// int size = int.Parse(Console.Readline()!);
-int size = 6;
-int[,] arr = new int [size,size];
+// int size = int.Parse(Console.ReadLine()!);
+// int[,] arr = new int [size,size];
 
-// заполним первую строку массива
-for (int i =0; i<size; i++)
-{
-    arr[0,i]=100 + i;
-}
+// // заполним первую строку массива
+// for (int i =0; i<size; i++)
+// {
+//     arr[0,i]=100 + i;
+// }
 
-// а дальше магия)
-int n = size; // переменная n создана исключительно для меня, т.к. на бумаге у меня обозначены позиции с помощью n
-int line = 0;
-int col = n-1;
-int HelpI = 5;
-int HelpJ = 6;
-int count = 3;
-int current = arr[0,n-1] +1; // потому что  первая строка массива заполнена. Это актуальное число
-while (count>0)
-{
-    for (int i = line+1; i<=HelpI; i++){
-        arr[i,col] = current;
-        current++;
-        line = i;
-    }
-    for (int j = col-1; j>=n-HelpJ; j--){
-        arr[line,j] = current;
-        current++;
-        col=j;
-    }
-    HelpJ-=2;
-    for (int i = line-1; i>=n-HelpI; i--){
-        arr[i,col] = current;
-        current++;
-        line = i;
-    }
-    for (int j = col + 1;j<=HelpJ;j++){
-        arr[line,j] = current;
-        current++;
-        col=j;
-    }
-    HelpJ++;
-    HelpI--;
-    count--;;
-}
+// // а дальше магия)
+// int line = 0;
+// int col = size-1;
+// int HelpI = size-1;
+// int HelpJ = size;
+// int count = size/2;
+// int current = arr[0,size-1] +1; // потому что  первая строка массива заполнена. Это актуальное число
+// while (count>0)
+// {
+//     for (int i = line+1; i<=HelpI; i++){
+//         arr[i,col] = current;
+//         current++;
+//         line = i;
+//     }
+//     for (int j = col-1; j>=size-HelpJ; j--){
+//         arr[line,j] = current;
+//         current++;
+//         col=j;
+//     }
+//     HelpJ-=2;
+//     for (int i = line-1; i>=size-HelpI; i--){
+//         arr[i,col] = current;
+//         current++;
+//         line = i;
+//     }
+//     for (int j = col + 1;j<=HelpJ;j++){
+//         arr[line,j] = current;
+//         current++;
+//         col=j;
+//     }
+//     HelpJ++;
+//     HelpI--;
+//     count--;;
+// }
 
+// // вывод массива
+// for (int i =0;i<size;i++)
+// {
+//     for (int j=0;j<size;j++)
+//     {
+//         Console.Write($"{arr[i,j]} ");
+//     }
+//     Console.WriteLine();
+// }
 
-
-
-
-// вывод массива
-for (int i =0;i<size;i++)
-{
-    for (int j=0;j<size;j++)
-    {
-        Console.Write($"{arr[i,j]} ");
-    }
-    Console.WriteLine();
-}
-
-Console.WriteLine(HelpI);
-Console.WriteLine(HelpJ);
-Console.WriteLine(line);
-Console.WriteLine(col);
+// // Очень устал, но доволен своей работой :3
