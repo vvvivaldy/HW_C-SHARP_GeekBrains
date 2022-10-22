@@ -86,35 +86,36 @@ for (int i =0; i<size; i++)
 int n = size; // переменная n создана исключительно для меня, т.к. на бумаге у меня обозначены позиции с помощью n
 int line = 0;
 int col = n-1;
-int HelpNum = 0;
-int UnHelpNum = 4;
+int HelpI = 5;
+int HelpJ = 6;
+int count = 3;
 int current = arr[0,n-1] +1; // потому что  первая строка массива заполнена. Это актуальное число
-while (n>0)
+while (count>0)
 {
-    for (int i = line+1; i<n-HelpNum; i++){
+    for (int i = line+1; i<=HelpI; i++){
         arr[i,col] = current;
         current++;
         line = i;
     }
-    for (int j = col-1; j>=HelpNum; j--){
+    for (int j = col-1; j>=n-HelpJ; j--){
         arr[line,j] = current;
         current++;
         col=j;
     }
-    n--;
-    HelpNum ++;
-    for (int i = line-1; i>=n-UnHelpNum; i--){
+    HelpJ-=2;
+    for (int i = line-1; i>=n-HelpI; i--){
         arr[i,col] = current;
         current++;
         line = i;
     }
-    for (int j = col + 1;j<n-HelpNum;j++){
+    for (int j = col + 1;j<=HelpJ;j++){
         arr[line,j] = current;
         current++;
         col=j;
     }
-    UnHelpNum-=2;
-    n--;
+    HelpJ++;
+    HelpI--;
+    count--;;
 }
 
 
@@ -130,3 +131,8 @@ for (int i =0;i<size;i++)
     }
     Console.WriteLine();
 }
+
+Console.WriteLine(HelpI);
+Console.WriteLine(HelpJ);
+Console.WriteLine(line);
+Console.WriteLine(col);
