@@ -5,25 +5,17 @@ int a = int.Parse(Console.ReadLine()!);
 Console.Write(" ");
 int b = int.Parse(Console.ReadLine()!);
 
-WriteArr(GetArr(a,b));
+int[,] arr = GetArr(a,b);
+WriteArr(arr);
 
 Console.Write("Измененный массив: ");
+WriteArr(SortDecreaseArr(arr));
 
 int[,] SortDecreaseArr (int[,] arr)
 {
-    int max;
-    int temp;
-    for (int i = 0; i<arr.GetLenth(0); i++)
+    for (int i = 0; i<arr.GetLength(0); i++)
     {
-        max = arr[i,0];
-        for (int j = 1;j<arr.GetLenth(1);j++)
-        {
-            if (max < arr[i,j])
-            {
-                arr[]
-                
-            }
-        }
+        Array.Sort(arr[i,]);
     }
     return arr;
 }
